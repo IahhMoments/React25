@@ -5,7 +5,9 @@ import { CORE_CONCEPTS } from './data.js';
 
 
 function App() {
-  const handleClick = () => { console.log('Hello World') }
+  const handleClick = (selectedButton) => { 
+    console.log(selectedButton) 
+  }
   return (
     <div>
       <Header />
@@ -26,10 +28,10 @@ function App() {
         <section id="examples">
           <h2>examples</h2>
           <menu>
-            <TabButton onSelect={handleClick}>Components</TabButton>
-            <TabButton onSelect={handleClick}>JSX</TabButton>
-            <TabButton onSelect={handleClick}>Props</TabButton>
-            <TabButton onSelect={handleClick}>State</TabButton>
+            <TabButton onSelect={() => handleClick('components')}>Components</TabButton>
+            <TabButton onSelect={() => handleClick('jsx')}>JSX</TabButton>
+            <TabButton onSelect={() => handleClick('props')}>Props</TabButton>
+            <TabButton onSelect={() => handleClick('state')}>State</TabButton>
           </menu>
         </section>
       </main>
