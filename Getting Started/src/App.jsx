@@ -6,12 +6,27 @@ import { CORE_CONCEPTS, EXAMPLES } from "./data.js";
 import { useState } from "react";
 
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState("components");
+  const [selectedTopic, setSelectedTopic] = useState(null);
 
   const handleClick = (selectedButton) => {
     setSelectedTopic(selectedButton);
     console.log(selectedButton);
   };
+
+  let tabContent = <p>Please select a topic</p>;
+
+  if (selectedTopic) {
+    tabContent = (
+      <div id="tab-content">
+        <h3>{EXAMPLES[selectedTopic].title}</h3>
+        <p>{EXAMPLES[selectedTopic].description}</p>
+        <pre>
+          <code>{EXAMPLES[selectedTopic].code}</code>
+        </pre>
+      </div>
+    );
+  }
+
   return (
     <div>
       <Header />
@@ -39,15 +54,8 @@ function App() {
             <TabButton onSelect={() => handleClick("props")}>Props</TabButton>
             <TabButton onSelect={() => handleClick("state")}>State</TabButton>
           </menu>
+          {tabContent}
         </section>
-        {!selectedTopic ? <p>Please select a topic</p> : null}
-        <div id="tab-content">
-          <h3>{EXAMPLES[selectedTopic].title}</h3>
-          <p>{EXAMPLES[selectedTopic].description}</p>
-          <pre>
-            <code>{EXAMPLES[selectedTopic].code}</code>
-          </pre>
-        </div>
       </main>
     </div>
   );
