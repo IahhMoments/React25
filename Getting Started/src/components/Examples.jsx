@@ -1,6 +1,8 @@
 import { EXAMPLES } from "../data.js";
 import { useState } from "react";
 import TabButton from "./TabButton.jsx";
+import Section from "./Section.jsx";
+import Tabs from "./Tabs.jsx";
 
 export default function Examples() {
   const [selectedTopic, setSelectedTopic] = useState(null);
@@ -25,35 +27,40 @@ export default function Examples() {
   }
 
   return (
-    <section id="examples">
-      <h2>examples</h2>
-      <menu>
-        <TabButton
-          isActive={selectedTopic === "components"}
-          onSelect={() => handleClick("components")}
-        >
-          Components
-        </TabButton>
-        <TabButton
-          isActive={selectedTopic === "jsx"}
-          onSelect={() => handleClick("jsx")}
-        >
-          JSX
-        </TabButton>
-        <TabButton
-          isActive={selectedTopic === "props"}
-          onSelect={() => handleClick("props")}
-        >
-          Props
-        </TabButton>
-        <TabButton
-          isActive={selectedTopic === "state"}
-          onSelect={() => handleClick("state")}
-        >
-          State
-        </TabButton>
-      </menu>
+    <Section title="Examples" id="examples">
+      <Tabs
+        buttons={
+          <>
+            <TabButton
+              isActive={selectedTopic === "components"}
+              onClick={() => handleClick("components")}
+            >
+              Components
+            </TabButton>
+            <TabButton
+              isActive={selectedTopic === "jsx"}
+              onClick={() => handleClick("jsx")}
+            >
+              JSX
+            </TabButton>
+            <TabButton
+              isActive={selectedTopic === "props"}
+              onClick={() => handleClick("props")}
+            >
+              Props
+            </TabButton>
+            <TabButton
+              isActive={selectedTopic === "state"}
+              onClick={() => handleClick("state")}
+            >
+              State
+            </TabButton>
+          </>
+        }
+      >
+        {tabContent}
+      </Tabs>
       {tabContent}
-    </section>
+    </Section>
   );
 }
