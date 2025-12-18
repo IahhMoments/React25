@@ -4,6 +4,8 @@ export default function Player({ initialName, symbol, isActive }) {
   const [playerName, setPlayerName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
 
+  // ===================== Variables =======================
+
   const handleEdit = () => {
     setIsEditing((editing) => !editing);
   };
@@ -17,6 +19,8 @@ export default function Player({ initialName, symbol, isActive }) {
       {playerName}
     </span>
   );
+
+  // ========================================================
 
   if (isEditing) {
     editName = (
