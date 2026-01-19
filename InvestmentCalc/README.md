@@ -1,18 +1,87 @@
-# React + Vite
+# 💰 Investment Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive **Investment Calculator** built with React that allows users to estimate the growth of their investments over time based on different financial inputs.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Technologies Used
 
-## React Compiler
+* **React** (Functional Components)
+* **JavaScript (ES6+)**
+* **Vite** (Development & Build Tool)
+* **CSS**
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## ✨ Features
 
-## Expanding the ESLint configuration
+* 📥 Input initial investment amount
+* 💵 Add yearly contributions
+* 📈 Set expected annual return percentage
+* ⏳ Choose investment duration in years
+* 📊 View calculated investment results in a structured table
+* ✅ Input validation with user-friendly feedback
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧩 The Process
+
+1. Set up the project using **Vite + React** for a fast development environment
+2. Broke the UI into reusable components:
+
+   * `Header` for branding
+   * `UserInput` for handling form inputs
+   * `Results` for displaying calculated data
+3. Managed application state in the main `App` component
+4. Passed data and handlers between components using **props**
+5. Centralized investment calculation logic in a utility file for better separation of concerns
+6. Added conditional rendering to handle invalid input states
+
+---
+
+## 📚 What I Learned
+
+* Strengthened understanding of **React component composition**
+* Practical use of the **`useState` hook** for managing complex state objects
+* Passing and updating state via **props and callback functions**
+* Implementing **conditional rendering** based on derived state
+* Separating business logic from UI using utility functions
+* Writing cleaner, more maintainable React code
+
+---
+
+## 🚀 How to Run the Project
+
+1. Clone the repository
+
+   ```bash
+   git clone https://github.com/IahhMoments/React25.git
+   ```
+
+2. Navigate to the project folder
+
+   ```bash
+   cd InvestmentCalc
+   ```
+
+3. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and visit:
+
+   ```
+   http://localhost:5173
+   ```
+
+---
+
+**Author:** Isaiah Hill
