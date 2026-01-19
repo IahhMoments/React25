@@ -84,4 +84,6 @@ A simple and interactive **Investment Calculator** built with React that allows 
 
 ---
 
+https://github.com/user-attachments/assets/1a61e1e8-91ad-4176-bc14-360e01271755
+
 **Author:** Isaiah Hill
