@@ -1,5 +1,5 @@
 import { useState } from "react";
-import QUESTIONS from "../questions.js";
+import QUESTIONS from "../../questions.js";
 
 export default function Quiz() {
   const [userAnswer, setUserAnswer] = useState([]);
